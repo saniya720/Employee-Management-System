@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Form</title>
+    <link rel="stylesheet" href="proj2.css">
+</head>
+<body>
+    <h2>Employee List</h2>
+    <table id="employeeTable">
+    <thead>
+      <tr>
+      <th onclick="sortTable(0)">EMP ID</th>
+      <th onclick="sortTable(1)">EMP NAME</th>
+      <th onclick="sortTable(2)">DESIGNATION</th>
+      <th onclick="sortTable(3)">SALARY</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+
+  <tbody></tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Total Amount</td>
+      <td id="totalSalary"></td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2>Employee Registration Form</h2>
+<form id="employeeForm">
+  <label for="empId">Employee Id:</label>
+  <input type="text" id="empId" name="empId" readonly><br><br>
+
+  <label for="empName">Employee Name:</label>
+  <input type="text" id="empName" name="empName" maxlength="50" required><br><br>
+
+  <label for="designation">Designation:</label>
+  <select id="designation" name="designation">
+    <option>Select below</option>
+    <option value="Software Engineer">Software Engineer</option>
+    <option value="UI Developer">UI Developer</option>
+    <option value="DB">DB</option>
+  </select><br><br>
+
+  <label for="salary">Salary:</label>
+  <input type="number" id="salary" name="salary"  required><br><br>
+  
+  <button type="button" onclick="addEmployee()">Save</button>
+  <input type="hidden" id="editingId" value="">
+
+
+
+  <script src="proj2.js"></script>
+  
+</form>
+</body>
+</html>
